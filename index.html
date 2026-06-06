@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Politique de confidentialité - CarControl MQTT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .header .badge {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+
+        .last-updated {
+            background: #f8f9fa;
+            padding: 12px 25px;
+            border-left: 4px solid #2c5364;
+            font-size: 0.85rem;
+            color: #6c757d;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        /* Contenu */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #2c5364;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            color: #343a40;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .content ul, .content ol {
+            margin: 15px 0 15px 25px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        /* Tableaux */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .data-table th {
+            background: #2c5364;
+            color: white;
+            font-weight: 600;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table .check-no {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .data-table .check-yes {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Cartes */
+        .card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #2c5364;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Badges */
+        .badge-green {
+            background: #d4edda;
+            color: #155724;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        .badge-red {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .footer a {
+            color: #2c5364;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 25px 20px;
+            }
+            .header h1 {
+                font-size: 1.4rem;
+            }
+            .data-table th,
+            .data-table td {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .header {
+                background: #2c5364;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .last-updated {
+                background: #f8f9fa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">🚗🔒</div>
+            <h1>Politique de confidentialité</h1>
+            <p>CarControl MQTT</p>
+            <div class="badge">✅ Aucune donnée collectée</div>
+        </div>
+
+        <div class="last-updated">
+            📅 Dernière mise à jour : <strong>6 juin 2026</strong>
+        </div>
+
+        <div class="content">
+            <h2>1. Introduction</h2>
+            <p>Bienvenue dans <strong>CarControl MQTT</strong> (ci-après "l'Application", "nous", "notre"). La présente politique de confidentialité décrit comment nous traitons vos informations lorsque vous utilisez notre application.</p>
+            <div class="card">
+                <p>🎯 <strong>Notre engagement :</strong> Votre vie privée est importante. Cette application ne collecte, ne stocke ni ne partage <strong>AUCUNE donnée personnelle</strong>.</p>
+            </div>
+
+            <h2>2. Données collectées</h2>
+            <p>Voici un tableau récapitulatif des données que nous <strong>ne collectons pas</strong> :</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr><th>Type de donnée</th><th>Collectée ?</th><th>Explication</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nom, prénom, email, adresse</td><td class="check-no">❌ Non</td><td>Aucun compte utilisateur requis</td></tr>
+                    <tr><td>Localisation GPS</td><td class="check-no">❌ Non</td><td>L'application n'y a pas accès</td></tr>
+                    <tr><td>Contacts, SMS, historique d'appels</td><td class="check-no">❌ Non</td><td>Aucune permission de communication</td></tr>
+                    <tr><td>Photos, vidéos, fichiers</td><td class="check-no">❌ Non</td><td>Pas de stockage local persistant</td></tr>
+                    <tr><td>Identifiants de l'appareil</td><td class="check-no">❌ Non</td><td>Non lus ni transmis</td></tr>
+                    <tr><td>Données d'utilisation (analytics)</td><td class="check-no">❌ Non</td><td>Aucun tracker, pas de Firebase/Google Analytics</td></tr>
+                    <tr><td>Informations de paiement</td><td class="check-no">❌ Non</td><td>Application gratuite, sans achats intégrés</td></tr>
+                </tbody>
+            </table>
+
+            <h2>3. Comment fonctionne l'application ?</h2>
+            <p>CarControl MQTT est une application de <strong>contrôle de véhicule à distance</strong>. Elle communique avec une carte ESP8266 (équipée de relais) via le protocole <strong>MQTT</strong>.</p>
+
+            <h3>📡 Données échangées</h3>
+            <ul>
+                <li><strong>Commandes envoyées :</strong> CONTACT_ON/OFF, ESSENCE_ON/OFF, START, STOP, KLAXON, STATUS</li>
+                <li><strong>Statut reçu :</strong> état des relais (contact, essence), force du signal WiFi (RSSI), uptime, état d'authentification</li>
+            </ul>
+
+            <div class="card">
+                <p>🔒 <strong>Ces données :</strong></p>
+                <ul style="margin-top: 10px;">
+                    <li>Circulent sur votre <strong>réseau local</strong> (WiFi domestique) ou via un broker public (ex: broker.emqx.io)</li>
+                    <li>Ne sont <strong>jamais stockées</strong> sur nos serveurs</li>
+                    <li>Ne sont <strong>jamais vendues, louées ou partagées</strong> avec des tiers</li>
+                    <li>Sont <strong>effacées immédiatement</strong> après traitement</li>
+                </ul>
+            </div>
+
+            <h2>4. Permissions demandées</h2>
+            <p>L'Application demande <strong>une seule permission</strong> :</p>
+            <ul>
+                <li><strong>INTERNET</strong> : Permet de communiquer avec le broker MQTT et votre véhicule</li>
+            </ul>
+            <p>Aucune autre permission n'est requise (pas de stockage, pas de localisation, pas de caméra, pas de microphone).</p>
+
+            <h2>5. Sécurité des données</h2>
+            <p>Bien que nous ne stockions aucune donnée, nous mettons en œuvre les mesures suivantes :</p>
+            <ul>
+                <li>🔐 <strong>Authentification par mot de passe</strong> entre l'application et la carte ESP8266 (topic MQTT <code>voiture/auth</code>)</li>
+                <li>🔒 <strong>Chiffrement recommandé :</strong> Utilisation d'un broker MQTT avec TLS (port 8883) pour sécuriser les communications</li>
+                <li>🛡️ <strong>Aucune information sensible</strong> n'est affichée en clair dans l'interface</li>
+                <li>📱 <strong>Pas de stockage local</strong> des identifiants de connexion</li>
+            </ul>
+
+            <h2>6. Services tiers</h2>
+            <p>L'Application peut se connecter à des <strong>brokers MQTT tiers</strong>. Ces services ont leurs propres politiques de confidentialité :</p>
+            <ul>
+                <li><a href="https://www.emqx.com/en/privacy" target="_blank">EMQX Cloud - Politique de confidentialité</a></li>
+                <li><a href="https://mosquitto.org/privacy" target="_blank">Eclipse Mosquitto</a></li>
+            </ul>
+            <p>Nous vous encourageons à consulter ces politiques. Notez que vous pouvez également utiliser <strong>votre propre broker local</strong> (Mosquitto sur Raspberry Pi, etc.) pour une confidentialité maximale.</p>
+
+            <h2>7. Droits des utilisateurs</h2>
+            <p>Conformément au RGPD (si vous êtes en Europe) et au CCPA (Californie), vous disposez des droits suivants :</p>
+            <ul>
+                <li>✅ <strong>Droit d'accès :</strong> Demander quelles données sont traitées (réponse : aucune)</li>
+                <li>✅ <strong>Droit de suppression :</strong> Demander la suppression de vos données (déjà aucune)</li>
+                <li>✅ <strong>Droit d'opposition :</strong> Vous opposer au traitement (sans objet)</li>
+                <li>✅ <strong>Droit à la portabilité :</strong> Recevoir vos données (réponse : aucune)</li>
+            </ul>
+            <p>Pour exercer ces droits, contactez-nous à l'adresse ci-dessous.</p>
+
+            <h2>8. Enfants</h2>
+            <p>L'Application ne s'adresse pas spécifiquement aux enfants de moins de 13 ans. Elle ne collecte aucune information permettant d'identifier l'âge de l'utilisateur. Si vous êtes parent et avez des questions, contactez-nous.</p>
+
+            <h2>9. Modifications de cette politique</h2>
+            <p>Toute modification sera publiée sur cette page avec une nouvelle date de "Dernière mise à jour". Nous vous encourageons à consulter régulièrement cette politique. En cas de changement important, nous vous avertirons via l'application (notification ou message).</p>
+
+            <h2>10. Contact</h2>
+            <p>Pour toute question concernant cette politique de confidentialité ou vos données :</p>
+            <div class="card">
+                <p>📧 <strong>Email :</strong> <a href="mailto:votre.email@gmail.com">votre.email@gmail.com</a><br>
+                🔗 <strong>GitHub :</strong> <a href="https://github.com/votre-nom/CarControl-ESP" target="_blank">github.com/votre-nom/CarControl-ESP</a><br>
+                📱 <strong>Application sur Google Play :</strong> <em>(lien disponible prochainement)</em></p>
+            </div>
+
+            <h2>11. Consentement</h2>
+            <p>En utilisant <strong>CarControl MQTT</strong>, vous acceptez cette politique de confidentialité. Si vous n'êtes pas d'accord, veuillez ne pas utiliser l'application.</p>
+
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #e9ecef;">
+
+            <div style="text-align: center; font-size: 0.85rem; color: #6c757d;">
+                <p>🔒 CarControl MQTT - La transparence avant tout</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 CarControl MQTT - Tous droits réservés</p>
+            <p><a href="#">Haut de page ↑</a></p>
+        </div>
+    </div>
+</body>
+</html>
